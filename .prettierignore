@@ -1,0 +1,8 @@
+dist
+coverage
+
+.next
+
+*.json
+*.log
+*.md
