@@ -1,0 +1,20 @@
+.button {
+    display: inline-block;
+    width: 320px;
+    height: 60px;
+    font-size: 1.6rem;
+    border: 0;
+    appearance: none;
+    cursor: pointer;
+}
+
+.primary {
+    color: white;
+    background: #0070f3;
+}
+
+.secondary {
+    color: white;
+    background: #e2445d;
+    outline-color: #bc1c36;
+}
