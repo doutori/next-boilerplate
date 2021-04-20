@@ -2,10 +2,13 @@ import React, { PropsWithChildren } from "react";
 import styles from "./style.module.css";
 
 export type Props = {
-    type: "primary" | "secondary";
+    type?: "primary" | "secondary";
 };
 
-const Component: React.FC<PropsWithChildren<Props>> = ({ children, type }) => {
+const Component: React.FC<PropsWithChildren<Props>> = ({
+    children,
+    type = "primary",
+}) => {
     return (
         <button
             className={`${styles.button} ${
