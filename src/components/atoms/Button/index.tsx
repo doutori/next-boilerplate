@@ -5,7 +5,7 @@ export type Props = {
     type?: "primary" | "secondary";
 };
 
-const Component: React.FC<PropsWithChildren<Props>> = ({
+const Button: React.FC<PropsWithChildren<Props>> = ({
     children,
     type = "primary",
 }) => {
@@ -20,4 +20,4 @@ const Component: React.FC<PropsWithChildren<Props>> = ({
     );
 };
 
-export default Component;
+export default Button;
