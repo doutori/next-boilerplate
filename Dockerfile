@@ -4,8 +4,7 @@
 FROM node:14.15.0-alpine AS builder
 
 WORKDIR /app
-ARG BUILD_ENV=production
-ENV NODE_ENV=${BUILD_ENV}
+ENV NODE_ENV=production
 
 COPY package.json \
     yarn.lock \
@@ -14,8 +13,8 @@ COPY . .
 
 EXPOSE 3000
 
-RUN npm install -p \
-    && npm run build
+RUN yarn install --production=false \
+    && yarn build
 
 #=================
 # Production Build
@@ -26,9 +25,10 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY --from=builder ./app/.next .next
-COPY --from=builder ./app/node_modules ./node_modules
-COPY --from=builder ./app/package.json .
+COPY --from=builder ./app/package.json  .
+COPY --from=builder ./app/yarn.lock .
+RUN yarn install --production
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
