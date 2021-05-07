@@ -1,0 +1,6 @@
+{
+  "video": false,
+  "fixturesFolder": "cypress/fixtures",
+  "integrationFolder": "cypress/integration",
+  "screenshotsFolder": "cypress/screenshots"
+}
