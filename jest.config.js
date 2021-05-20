@@ -24,5 +24,6 @@ module.exports = {
         "<rootDir>/out/",
         "<rootDir>/node_modules/",
         "<rootDir>/dist/",
+        "<rootDir>/cypress/",
     ],
 };
