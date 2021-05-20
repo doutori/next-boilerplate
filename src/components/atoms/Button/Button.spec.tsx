@@ -22,4 +22,11 @@ describe("Atoms/Button", () => {
         expect(button).toBeTruthy();
         expect(button).toHaveClass("button", "secondary");
     });
+
+    it("can override button text", () => {
+        render(<Primary>Hello World!</Primary>);
+
+        const button = screen.getByText("Hello World!");
+        expect(button).toBeTruthy();
+    });
 });
