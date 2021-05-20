@@ -1,5 +1,7 @@
 ## Next.js Boilerplate
 
+[![Node.js CI](https://github.com/doutori/next-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/doutori/next-boilerplate/actions/workflows/node.js.yml)
+
 Next.js を利用したアプリケーション開発を行う際の個人的なボイラープレートです。
 
 ## 基本的な構成
