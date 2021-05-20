@@ -7,10 +7,10 @@ export default {
     component: Button,
 } as Meta;
 
-const Template: Story<Props> = (args) => <Button {...args} />;
+const Template: Story<Props> = (args) => <Button {...args}>ボタンです</Button>;
 
 export const Primary = Template.bind({});
-Primary.args = { type: "primary", children: "Primary Button" };
+Primary.args = { type: "primary" };
 
 export const Secondary = Template.bind({});
-Secondary.args = { type: "secondary", children: "Secondary Button" };
+Secondary.args = { type: "secondary" };
