@@ -5,6 +5,7 @@
 
 module.exports = {
     clearMocks: true,
+    testEnvironment: "jsdom",
     globals: {
         "ts-jest": {
             tsconfig: "tsconfig.spec.json",
