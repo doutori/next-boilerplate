@@ -6,9 +6,10 @@ module.exports = {
         tsconfigRootDir: ".",
     },
     extends: [
+        "next",
+        "next/core-web-vitals",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:cypress/recommended",
         "plugin:testing-library/react",
