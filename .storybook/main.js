@@ -1,8 +1,8 @@
 module.exports = {
-    stories: [
-        "../src/**/*.stories.mdx",
-        "../src/**/*.stories.@(js|jsx|ts|tsx)",
-    ],
+    features: {
+        previewCsfV3: true,
+    },
+    stories: ["../src"],
     addons: [
         "@storybook/addon-links",
         "@storybook/addon-essentials",
