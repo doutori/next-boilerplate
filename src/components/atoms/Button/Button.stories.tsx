@@ -3,14 +3,24 @@ import { Meta, Story } from "@storybook/react";
 import Button, { Props } from "./";
 
 export default {
-    title: "Components/Atoms/Button",
     component: Button,
 } as Meta;
 
-const Template: Story<Props> = (args) => <Button {...args}>ボタンです</Button>;
+export const Default: Story<Props> = {
+    // eslint-disable-next-line react/display-name
+    render: (args) => <Button {...args}>ボタンです</Button>,
+};
 
-export const Primary = Template.bind({});
-Primary.args = { type: "primary" };
+export const Primary: Story<Props> = {
+    ...Default,
+    args: {
+        type: "primary",
+    },
+};
 
-export const Secondary = Template.bind({});
-Secondary.args = { type: "secondary" };
+export const Secondary: Story<Props> = {
+    ...Default,
+    args: {
+        type: "secondary",
+    },
+};
