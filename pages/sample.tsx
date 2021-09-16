@@ -4,8 +4,8 @@ import Button from "~/components/atoms/Button";
 export default function Component() {
     const [user, setUser] = useState<string>("");
 
-    const handleClick = (num) => {
-        console.log("Click" + num);
+    const handleClick = (username: string) => {
+        console.log("Click" + username);
         setUser("");
     };
 
