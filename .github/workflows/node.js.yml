@@ -63,34 +63,34 @@ jobs:
 
         needs: setup
 
-    format:
-        runs-on: ${{ matrix.os }}
-
-        strategy:
-            matrix:
-                os: [ubuntu-latest]
-                node: [14.x]
-
-        steps:
-            - name: Use Node.js ${{ matrix.node }}
-              uses: actions/setup-node@v2
-              with:
-                  node-version: ${{ matrix.node }}
-
-            - name: Checkout
-              uses: actions/checkout@v2
-
-            - name: Restore cache
-              uses: actions/cache@v2
-              with:
-                  path: |
-                      node_modules
-                  key: node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-
-            - name: Run formater
-              run: yarn format
-
-        needs: setup
+#    format:
+#        runs-on: ${{ matrix.os }}
+#
+#        strategy:
+#            matrix:
+#                os: [ubuntu-latest]
+#                node: [14.x]
+#
+#        steps:
+#            - name: Use Node.js ${{ matrix.node }}
+#              uses: actions/setup-node@v2
+#              with:
+#                  node-version: ${{ matrix.node }}
+#
+#            - name: Checkout
+#              uses: actions/checkout@v2
+#
+#            - name: Restore cache
+#              uses: actions/cache@v2
+#              with:
+#                  path: |
+#                      node_modules
+#                  key: node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+#
+#            - name: Run formater
+#              run: yarn format
+#
+#        needs: setup
 
     test:
         runs-on: ${{ matrix.os }}
@@ -118,5 +118,8 @@ jobs:
 
             - name: Run test
               run: yarn test
+
+            - name: Run formater
+              run: yarn format
 
         needs: setup
